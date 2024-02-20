@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "http-server --cors -c-1",
+    "dev": "concurrently --names \"TSC,Http\" -c \"bgBlue.bold,bgGreen.bold\" \"tsc -w\" \"servez\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -12,5 +12,10 @@
   "license": "ISC",
   "dependencies": {
     "@webgpu/types": "^0.1.40"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "servez": "^2.1.3",
+    "typescript": "^5.3.3"
   }
 }
