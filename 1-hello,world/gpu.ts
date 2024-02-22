@@ -35,7 +35,7 @@ async function main() {
     0.0, 1.0, 0.0, // 🟢
     0.0, 0.0, 1.0, // 🔵
     0.0, 0.0, 0.0  // ⚫
-]);
+  ]);
   const indices = new Uint16Array([0, 1, 2, 0, 2, 3]);
 
   const vertexBuffer = device.createBuffer({
@@ -148,7 +148,6 @@ async function main() {
     ],
   });
 
-  // Draw the grid.
   pass.setPipeline(cellPipeline);
   pass.setVertexBuffer(0, vertexBuffer);
   pass.setVertexBuffer(1, colorBuffer);
