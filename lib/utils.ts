@@ -5,3 +5,15 @@ export function getElementById(id: string): HTMLElement {
   }
   return element;
 }
+
+export async function getImg(src: string): Promise<HTMLImageElement> {
+  return new Promise((resolve, reject) => {
+    const image = new Image();
+    image.crossOrigin = "anonymous";
+    image.src = src;
+    image.onload = () => {
+      resolve(image);
+    };
+    image.onerror = reject;
+  });
+}
