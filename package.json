@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently --names \"TSC,Http\" -c \"bgBlue.bold,bgGreen.bold\" \"tsc -w\" \"servez\"",
+    "dev": "concurrently --names \"TSC,Http\" -c \"bgBlue.bold,bgGreen.bold\" \"tsc -w\" \"servez -S\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
